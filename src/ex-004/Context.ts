@@ -13,7 +13,10 @@ class Context {
   }
 
   orderList(): string {
-    const result = this.strategy.orderList(["b", "e", "a", "d", "f"]);
+    const list =["b", "e", "a", "d", "f"]
+    console.log('list',list);
+    
+    const result = this.strategy.orderList(list);
 
     return `${result.join(",")} ${this.strategy.constructor.name}`;
   }
